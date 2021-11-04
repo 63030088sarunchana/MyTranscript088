@@ -42,8 +42,13 @@ namespace MyTranscript
             this.textBoxCourseGrade = new System.Windows.Forms.TextBox();
             this.buttonAddCourse = new System.Windows.Forms.Button();
             this.dataGridViewCourse = new System.Windows.Forms.DataGridView();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCourse)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -173,17 +178,50 @@ namespace MyTranscript
             // dataGridViewCourse
             // 
             this.dataGridViewCourse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCourse.Location = new System.Drawing.Point(24, 97);
+            this.dataGridViewCourse.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewCourse.Location = new System.Drawing.Point(3, 3);
             this.dataGridViewCourse.Name = "dataGridViewCourse";
-            this.dataGridViewCourse.Size = new System.Drawing.Size(751, 126);
+            this.dataGridViewCourse.Size = new System.Drawing.Size(532, 94);
             this.dataGridViewCourse.TabIndex = 7;
+            this.dataGridViewCourse.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCourse_CellContentClick);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(24, 97);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(546, 126);
+            this.tabControl1.TabIndex = 12;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.dataGridViewCourse);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(538, 100);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(538, 100);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridViewCourse);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.buttonAddCourse);
             this.Controls.Add(this.textBoxCourseGrade);
             this.Controls.Add(this.textBoxCourseCredit);
@@ -197,6 +235,8 @@ namespace MyTranscript
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCourse)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,6 +257,9 @@ namespace MyTranscript
         private System.Windows.Forms.TextBox textBoxCourseGrade;
         private System.Windows.Forms.Button buttonAddCourse;
         private System.Windows.Forms.DataGridView dataGridViewCourse;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 
